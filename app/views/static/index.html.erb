@@ -14,4 +14,24 @@ non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   <% end %>
 <% end %>
 </ul>
+<ul>
+<% @courses.each do |course| %>
+  <%= link_to course do %>
+    <li><%= course.name %> <%= course.code %> <%= course.description %></li>
+  <% end %>
+<% end %>
+</ul>
+<ul>
+<% @topics.each do |topic| %>
+  <%= link_to topic do %>
+    <li><%= topic.title %> <%= topic.student %> <%= topic.course %></li>
+  <% end %>
+<% end %>
+</ul>
+<% @posts.each do |post| %>
+  <%= link_to post do %>
+    <li><%= post.body %> <%= post.student %> <%= post.topic %></li>
+  <% end %>
+<% end %>
+</ul>
 </p>
