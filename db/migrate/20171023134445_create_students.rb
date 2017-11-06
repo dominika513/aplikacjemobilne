@@ -1,8 +1,11 @@
-class CreateStudentsAndCourses < ActiveRecord::Migration[5.1]
+class CreateStudents < ActiveRecord::Migration[5.1]
   def change
-    create_table :students_courses, id: false do |t|
-      t.belongs_to :student, index: true
-      t.belongs_to :course, index: true
+    create_table :students do |t|
+      t.string :name
+      t.string :index
+
+      t.timestamps
+
     end
   end
 end
